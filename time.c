@@ -22,9 +22,9 @@ int sef_cb_init_fresh (int type, sef_init_info_t *info);
 /* Entry points to the time driver. */
 struct chardriver time_tab =
 {
-        *cdr_open = time_open,
-        *cdr_close = time_close,
-        *cdr_read = time_read,
+        .cdr_open = time_open,
+        .cdr_close = time_close,
+        .cdr_read = time_read,
 };
  
 int time_open(devminor_t minor, int access, endpoint_t user_endpt)
